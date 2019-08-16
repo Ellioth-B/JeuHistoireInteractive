@@ -18,31 +18,26 @@ print("A votre gauche ce trouve un brasier avec brulant avec un tisonnier poser 
 print("Et derriere vous, vous ne voyer rien mais supposez qu'il y a une sorte de d'ouverture ou de fenetre. \n")
 
 
-#boucle pour redemander en continue si user tape int ou mot inexistant
-# ne detecte pas si ces un int avec des if, donc obliger? d'user de try except
-# ne detecte pas les int !! PUTAIN !!
+chaise = input("Que faites-vous ?\n ")
+entrees_valides = ["droite", "couteaux", "gauche","brasier","tisonnier","devant","porte","derriere","fenetre","attendre","rien"]
 
-# 1) Comencer par regler les fautes de frappes en str V
-# 2) Boucle pur redemander si erreur
-# 3) Si chiffre taper ?
-chaise = input("Que faites-vous ? ")
+# switch case pr une action par mot
+while chaise not in entrees_valides:
+    print("Essayer un autre mot clé.")
+    chaise = input("Que faites-vous ?\n")
+if chaise == ("droite") or chaise == ("couteaux"):
+    print("Vous tentez de basculez sur la droite en remuant votre corps, puis, vous parvenez a faire tomber la chaise au sol, cognant au passage le meuble.\n Cette action fit tomber alors le couteau dans votre direction...la derniere chose que vous voyez c'est la lame s'approchant a grande vitesse de votre crane...")
+elif chaise == ("gauche") or chaise == ("brasier") or chaise == ("tisonnier"):
+    print("Vous servir du brasier ou du tisonnier pour enflammez les attaches semblait une bonne idée..mais la réalité fut que vous tombiez sur le coté gauche tête la premiere dans le brasier..Une mort des plus douloureuses")
+elif chaise == ("devant") or chaise == ("porte"):
+    print("Vous tentez de basculez vers l'avant....vous passez plusieurs secondes a basculez d'avant en arrières tel un fou dans sa chambre capitonner, puis, vous parvenez a tomber vers l'avant.\n Pendant votre chute vers l'avant vous vous demander alors pourquoi avoir effectuer cette actions ? Vous n'avez malheuresement pas le temps d'y répondre puisque vous vous fracasser mortellement le crane contre le sol..")
+elif chaise == ("derriere") or chaise == ("fenetre"):
+    print("Vous essayer de vous faire tombez en arriere, le choix le plus risqué puisque vous ne savez pas ce qui si trouve.\n Lors de votre chute, votre chaise cogne une fenetre et brise un carreau, laissant de mutliple bout de verre au sol, sur lesquelles vous tombez, vous blessant a la main, mais par chance, vous arrivez a en saisir un et a scier vos attaches avec succès.\n Vous êtes libre !") 
+elif chaise == ("attendre") or chaise == ("rien"):
+    print("Vous avez decider d'attendre et d'affronter la torture.") #ajouter une fin ? ou retry? ou pas possible d'attendre?
 
-if chaise == str(chaise):
-    if chaise == ("droite") or chaise == ("couteaux"):
-        print("Vous tentez de basculez sur la droite en remuant votre corps, puis, vous parvenez a faire tomber la chaise au sol, cognant au passage le meuble.")
-        print("Cette action fit tomber alors le couteau dans votre direction...la derniere chose que vous voyez c'est la lame s'approchant a grande vitesse de votre crane...")
-    elif chaise == ("gauche") or chaise == ("brasier") or chaise == ("tisonnier"):
-        print("Vous servir du brasier ou du tisonnier pour enflammez les attaches semblait une bonne idée..mais la réalité fut que vous tombiez sur le coté gauche tête la premiere dans le brasier..Une mort des plus douloureuses")
-    elif chaise == ("devant") or chaise == ("porte"):
-        print("Vous tentez de basculez vers l'avant....vous passez plusieurs secondes a basculez d'avant en arrières tel un fou dans sa chambre capitonner, puis, vous parvenez a tomber vers l'avant.")
-        print("Pendant votre chute vers l'avant vous vous demander alors pourquoi avoir effectuer cette actions ? Vous n'avez malheuresement pas le temps d'y répondre puisque vous vous fracasser mortellement le crane contre le sol..")
-    elif chaise == ("derriere") or chaise == ("fenetre"):
-        print("Vous essayer de vous faire tombez en arriere, le choix le plus risqué puisque vous ne savez pas ce qui si trouve.\n") 
-        print("Lors de votre chute, votre chaise cogne une fenetre et brise un carreau, laissant de mutliple bout de verre au sol, sur lesquelles vous tombez, vous blessant a la main, mais par chance, vous arrivez a en saisir un et a scier vos attaches avec succès. Vous êtes libre !")
-    elif chaise == ("attendre") or chaise == ("rien"):
-        print("Vous avez decider d'attendre et d'affronter la torture.")
-    else:
-        print("Essayer un autre mot clé. Relisez la phrase de description.") #Dans le cas où le mot ne correspond pas.
+
+
 
 
   
