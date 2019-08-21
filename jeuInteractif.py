@@ -17,6 +17,7 @@ print("A votre droite ce trouve un meuble couvert d'ustensile; couteaux, cuillie
 print("A votre gauche ce trouve un brasier avec brulant avec un tisonnier poser dessus.")
 print("Et derriere vous, vous ne voyer rien mais supposez qu'il y a une sorte de d'ouverture ou de fenetre. \n")
 
+# .lower, pr eviter les mot avec  des majuscules
 
 chaise = input("Que faites-vous ?\n ")
 entrees_valides = ["droite", "couteaux", "gauche","brasier","tisonnier","devant","porte","derriere","fenetre","attendre","rien"]
